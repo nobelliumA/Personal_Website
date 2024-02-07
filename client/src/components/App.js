@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-
 import jwt_decode from "jwt-decode";
 
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
-
+import Home from "./pages/Home.js";
+import NavBar from "./modules/NavBar.js";
 import "../utilities.css";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import { socket } from "../client-socket.js";
 
 import { get, post } from "../utilities";
@@ -41,22 +41,20 @@ const App = () => {
     setUserId(undefined);
     post("/api/logout");
   };
-
-  return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <Skeleton
+  /*<Skeleton
             path="/"
             handleLogin={handleLogin}
             handleLogout={handleLogout}
             userId={userId}
-          />
-        }
-      />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+          />*/
+  return (
+    <div className="bg-gray-900 min-h-screen">
+      <NavBar />
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </div>
   );
 };
 
