@@ -21,17 +21,12 @@ function NavBar() {
           About
         </Link>
         <Link
-          to="/projects"
+          to="/portfolio"
           className="hover:text-indigo-700 pl-8 no-underline text-green-700  hover:-translate-y-1 duration-300 hover:scale-110"
         >
-          Projects
+          Portfolio
         </Link>
-        <Link
-          to="/resume"
-          className="hover:text-indigo-700 pl-8 no-underline text-green-700 hover:-translate-y-1 duration-300 hover:scale-110"
-        >
-          Resume
-        </Link>
+
         <Link
           to="/contact"
           className="hover:text-indigo-700 pl-8 no-underline text-green-700 hover:-translate-y-1 duration-300 hover:scale-110"

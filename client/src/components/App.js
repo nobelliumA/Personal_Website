@@ -5,6 +5,7 @@ import jwt_decode from "jwt-decode";
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
 import Home from "./pages/Home.js";
+import About from "./pages/About.js";
 import NavBar from "./modules/NavBar.js";
 import "../utilities.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -52,6 +53,7 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

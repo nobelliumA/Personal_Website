@@ -2,34 +2,67 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 import "./Home.css";
+import { useState } from "react";
 const Home = () => {
+  const [textColor, setTextColor] = useState("white");
+  const [link, setLink] = useState("/");
   return (
     <div className="h-screen flex items-center">
       <div className="flex-col">
-        <h1 className="  ml-8 text-white text-6xl mb-6 shadow-current ">Jasmine Shone</h1>
+        <h1 className="ml-8 text-white text-6xl mb-6 shadow-current ">Jasmine Shone</h1>
         <div className="flex-col content-center border-green-600  shadow-green-600 shadow-md pl-6 pr-6 pt-2 pb-2  font-mono border-4 rounded-md max-w-2xl ml-8  ">
-          <TypeAnimation
-            className="text-white "
-            sequence={[
-              // Same substring at the start will only be typed out once, initially
-              "AI Researcher",
-              1500, // wait 1s before replacing "Mice" with "Hamsters"
-              "Full-Stack Dev",
-              1500,
-              "Game Dev",
-              1500,
-              "Creative Writer",
-              1500,
-              "Public Speaker",
-              1500,
-              "Singer",
-              1500,
-            ]}
-            wrapper="span"
-            speed={50}
-            style={{ fontSize: "2em", display: "inline-block" }}
-            repeat={Infinity}
-          />
+          <Link to={link} style={{ color: textColor }}>
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                "AI Researcher",
+                () => {
+                  setTextColor("mediumpurple");
+                  setLink("/portfolio/AI");
+                },
+                1500, // wait 1s before replacing "Mice" with "Hamsters"
+
+                "Full-Stack Web Dev",
+                () => {
+                  setTextColor("aqua");
+                  setLink("/portfolio/web");
+                },
+                1500,
+
+                "Game Dev",
+                () => {
+                  setTextColor("deeppink");
+                  setLink("/portfolio/game");
+                },
+                1500,
+
+                "Creative & Essay Writer",
+                () => {
+                  setTextColor("darkorange");
+                  setLink("/portfolio/writing");
+                },
+                1500,
+
+                "Public Speaker",
+                () => {
+                  setTextColor("lightsalmon");
+                  setLink("/portfolio/speaking");
+                },
+                1500,
+
+                "Singer & Producer",
+                () => {
+                  setTextColor("dodgerblue");
+                  setLink("/portfolio/singing");
+                },
+                1500,
+              ]}
+              wrapper="span"
+              speed={50}
+              style={{ fontSize: "2em", display: "inline-block" }}
+              repeat={Infinity}
+            />
+          </Link>
         </div>
         <div className="flex ml-8 mt-8 align-middle items-center text-indigo-700">
           <a
