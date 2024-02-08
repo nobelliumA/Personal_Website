@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 import "./Home.css";
+
 import { useState } from "react";
 const Home = () => {
   const [textColor, setTextColor] = useState("white");
   const [link, setLink] = useState("/");
   return (
-    <div className="h-screen flex items-center">
+    <div className="h-screen flex items-center animate-fade">
       <div className="flex-col">
         <h1 className="ml-8 text-white text-6xl mb-6 shadow-current ">Jasmine Shone</h1>
         <div className="flex-col content-center border-green-600  shadow-green-600 shadow-md pl-6 pr-6 pt-2 pb-2  font-mono border-4 rounded-md max-w-2xl ml-8  ">
