@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   content: ["./client/src/**/*.{html,js}", "./client/dist/**/*/{html,js}"],
   theme: {
@@ -6,6 +8,7 @@ module.exports = {
       boxShadow: {
         green: "0 35px 60px -15px rgb(56, 161, 105, 0.2)",
       },
+
       animation: {
         typewriter: "typewriter 2s steps(11) forwards",
         caret: "typewriter 2s steps(11) forwards, blink 1s steps(11) infinite 2s",
@@ -40,6 +43,7 @@ module.exports = {
     // ...
     require("tailwindcss"),
     require("autoprefixer"),
+
     // ...
   ],
 };

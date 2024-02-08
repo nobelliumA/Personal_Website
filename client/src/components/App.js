@@ -48,10 +48,11 @@ const App = () => {
             userId={userId}
           />*/
   return (
-    <div className="bg-gray-900 min-h-screen">
+    <div className=" min-h-screen bg-gradient-to-br from-gray-950 to-gray-800">
       <NavBar />
       <Routes>
         <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
