@@ -28,10 +28,10 @@ function NavBar() {
         </Link>
 
         <Link
-          to="/contact"
-          className="hover:text-indigo-700 pl-8 no-underline text-green-700 hover:-translate-y-1 duration-300 hover:scale-110"
+          to="/blog"
+          className="no-underline hover:text-indigo-700 pl-8  text-green-700 hover:-translate-y-1 duration-300 hover:scale-110"
         >
-          Contact
+          Blog
         </Link>
       </Nav>
     </>

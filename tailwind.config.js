@@ -2,7 +2,11 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
-  content: ["./client/src/**/*.{html,js}", "./client/dist/**/*/{html,js}"],
+  content: [
+    "./client/src/**/*.{html,js}",
+    "./client/dist/**/*/{html,js}",
+    "./**/@material-tailwind/**/*.{html,js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
       boxShadow: {
